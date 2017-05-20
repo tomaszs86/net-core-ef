@@ -1,0 +1,38 @@
+@model net_core_ef.ViewModels.TaskViewModel
+
+<a asp-action="Create">Create</a>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                 <th>
+                    Priority
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Tasks) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td> 
+             <td>
+                @Html.DisplayFor(modelItem => item.Priority)
+            </td>          
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

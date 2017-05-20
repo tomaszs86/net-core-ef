@@ -1,0 +1,24 @@
+@model net_core_ef.ViewModels.TaskCreateViewModel
+<h2>Details</h2>
+
+<div class="form-horizontal">
+    <h4>Task</h4>
+    <hr />
+    
+    <div class="form-group">
+        <label asp-for="Name" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            @Model.Name
+        </div>
+    </div> 
+    <div class="form-group">
+        <label asp-for="Priority" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            @Model.Priority
+        </div>
+    </div>           
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
