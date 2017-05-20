@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using net_core_ef.Data;
 using Microsoft.EntityFrameworkCore;
+using net_core_ef.Services;
 
 namespace net_core_ef
 {
@@ -32,7 +33,7 @@ namespace net_core_ef
             // Add framework services.
             services.AddDbContext<EfCoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc();
-            //services.AddScoped<ITaskService, TaskService>();      
+            services.AddScoped<ITaskService, TaskService>();      
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

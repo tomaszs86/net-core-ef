@@ -17,7 +17,7 @@ namespace netcoreef.Migrations
                 .HasAnnotation("ProductVersion", "1.1.1")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("net_core_ef.Models.Task", b =>
+            modelBuilder.Entity("net_core_ef.Models.UserTask", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();

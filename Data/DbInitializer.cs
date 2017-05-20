@@ -16,16 +16,16 @@ namespace net_core_ef.Data
                 return;   // DB has been seeded
             }
 
-            var tasks = new Task[]
+            var tasks = new UserTask[]
             {
-                new Task{Name="Task 1",Priority = PriorityType.Low},   
-                new Task{Name="Task 2",Priority = PriorityType.Low},   
-                new Task{Name="Task 3",Priority = PriorityType.High},   
-                new Task{Name="Task 4", Priority = PriorityType.Low},   
-                new Task{Name="Task 5",Priority = PriorityType.Medium}                
+                new UserTask{Name="Task 1",Priority = PriorityType.Low},   
+                new UserTask{Name="Task 2",Priority = PriorityType.Low},   
+                new UserTask{Name="Task 3",Priority = PriorityType.High},   
+                new UserTask{Name="Task 4", Priority = PriorityType.Low},   
+                new UserTask{Name="Task 5",Priority = PriorityType.Medium}                
             };
 
-            foreach (Task s in tasks)
+            foreach (UserTask s in tasks)
             {
                 context.Tasks.Add(s);
             }

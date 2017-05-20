@@ -5,7 +5,7 @@ namespace net_core_ef.ViewModels
 {
     public class TaskViewModel
     {
-        public IEnumerable<Task> Tasks { get; set; }    
+        public IEnumerable<UserTask> Tasks { get; set; }    
         
     }
 }

@@ -9,6 +9,6 @@ namespace net_core_ef.Data
         {                                   
         }
 
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<UserTask> Tasks { get; set; }
     }
 }
